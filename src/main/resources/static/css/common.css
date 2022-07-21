@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: hsl(224, 97%, 34%);
+    width: 240px;
+    text-align: center;
+    box-shadow: 5px 0 15px 0 #000;
+}
+
+aside h1 {
+    font-size: 2rem;
+    line-height: 4rem;
+}
+
+aside h1 a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+
+aside section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+aside section h2 {
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, .3);
+    line-height: 2em;
+}
+
+aside section a {
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    line-height: 2.8em;
+}
+
+
+aside section a:hover {
+    background-color: hsla(0, 0%, 100%, .3);
+}
+
+main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    /*background-image: url(../img/cat-bg.jpg);*/
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-color: hsl(0, 0%, 83%);
+    background-attachment: fixed;
+}
+
+main p.current-user {
+    color: #eee;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>调查问卷</title>
+    <link rel="stylesheet" href="css/create.css">
+    <!-- 引入 layui.css -->
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+    <!-- 引入 layui.js -->
+    <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+</head>
+<body>
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo layui-hide-xs layui-bg-black"><a href="/" style="color: #fff">调查问卷</a></div>
+        <!-- 头部区域（可配合layui 已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <!-- 移动端显示 -->
+            <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                <i class="layui-icon layui-icon-spread-left"></i>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                <a href="javascript:;">
+                    <p class="current-user">加载中 ...</p>
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/user/quit.do">退出登录</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">用户管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/user/register.html">注册</a></dd>
+                        <dd><a href="/user/login.html">登录</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">题目管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/question/create.html">创建题目</a></dd>
+                        <dd><a href="/question/list.html">题目列表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">问卷管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/survey/create.html">创建问卷</a></dd>
+                        <dd><a href="/survey/list.html">问卷列表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">活动管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/activity/create.html">创建活动</a></dd>
+                        <dd><a href="/activity/list.html">活动列表</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="layui-body">
+        <form method="post" action="/activity/create.do">
+            <h2>创建活动</h2>
+            <select name="suid"></select>
+            <input type="text" name="started_at" placeholder="开始时间，格式必须是类似 '2022-01-01 00:00:00'" lay-verify="title" autocomplete="off" class="layui-input">
+            <input type="text" name="ended_at" placeholder="截至时间，格式必须是类似 '2022-01-01 00:00:00'" lay-verify="title" autocomplete="off" class="layui-input">
+            <button class="layui-btn">创建</button>
+        </form>
+    </main>
+</div>
+
+    <script src="../js/current-user.js"></script>
+    <script src="js/create.js"></script>
+</body>
+</html>

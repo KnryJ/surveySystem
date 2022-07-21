@@ -1,0 +1,23 @@
+main > section {
+    margin: 64px auto;
+    width: 90%;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+main > section > h2 {
+    text-align: center;
+    line-height: 5em;
+}
+
+main > section > section {
+    line-height: 4em;
+}
+
+main > section > section > section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}

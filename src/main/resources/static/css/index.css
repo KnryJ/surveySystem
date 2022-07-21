@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*main section {*/
+/*    background-color: hsla(0, 0%, 100%, .8);*/
+/*    padding: 22px;*/
+/*    border-radius: 12px;*/
+/*    color: #333;*/
+/*    line-height: 3em;*/
+/*    box-shadow: 2px 2px 10px 0 #000;*/
+
+/*}*/
+
+main section {
+    border-radius: 30px;
+    background: #fff;
+    box-shadow:  10px 10px 20px #cacaca,
+    -10px -10px 20px #f6f6f6;
+    padding: 22px;
+    color: #333;
+    line-height: 3em;
+}
